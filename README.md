@@ -25,6 +25,14 @@ chrome打開實況台掛台
 
 <hr>
 
+## 參考資訊：
+* <p><a href="https://ithelp.ithome.com.tw/users/20079450/ironman/1149">2017 iT 邦幫忙鐵人賽 羅拉拉 Chrome Extension 開發與實作</a></p>
+* <p><a href="https://github.com/kakapontw/GodJJNow">GodJJNow</a></p>
+* <p><a href="https://github.com/sky7st/TwitchAutoLoyalty">Twitch忠誠點數小幫手</a></p>
+
+
+<hr>
+
 ## 更新資訊：
 <h4>1.0.5</h4>
 <p><strong>此為第一版</strong></p>
