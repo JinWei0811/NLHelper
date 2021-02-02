@@ -1,4 +1,8 @@
 # 熊班長實況助手
+
+![GITHUB]( https://github.com/JinWei0811/-/blob/main/interface.png "interface")
+
+
 ## 主要提供功能
 - 自動點擊額外忠誠點數
 - 賭盤偵測提醒
