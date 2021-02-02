@@ -6,6 +6,13 @@
 
 <hr>
 
+## 使用方式:
+<p><a href="https://www.alexclassroom.com/internet/google/google-chrome/how-to-manually-install-chrome-extension/">This link</a> 參考此連結安裝資料夾-TwitchLoyalty.</p>
+
+chrome打開實況台掛台
+
+<hr>
+
 ## 使用者隱私聲明：
 此插件沒有蒐集任何使用者資訊
 
