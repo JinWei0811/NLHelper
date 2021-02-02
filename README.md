@@ -6,14 +6,17 @@
 ## 主要提供功能
 - 自動點擊額外忠誠點數
 - 賭盤偵測提醒
-<p>自動點擊、賭盤提醒皆可從選項中關閉，修改後需點擊提交送出</p>
-
+自動點擊、賭盤提醒皆可從選項中關閉，修改後需點擊提交送出。
+預設兩者皆為開啟狀態。
 <hr>
 
 ## 使用方式:
 <p><a href="https://www.alexclassroom.com/internet/google/google-chrome/how-to-manually-install-chrome-extension/">參考此連結安裝資料夾-TwitchLoyalty</a></p>
 
 Chrome 打開班長實況台掛台
+
+![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/Introduction.png "introduction")
+新增的擴充功能都會被收在拼圖裡，點擊拼圖在點擊 nlnlOUO 就可以打開主要介面，也可以使用釘選將他釘網址列右方。
 
 <hr>
 
