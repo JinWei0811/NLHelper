@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Popup Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <H1 style="text-align: center;">熊班長實況助手</H1>
+    <div class="container">
+        <div class="row">
+            <div class="btn-group btn-group-justified" role="group" aria-label="..." style="text-align: center;">
+                <a id="FBbutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img src="../icons/FB.png" style="width: 25px;"></a>
+                <a id="Youtubebutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img src="../icons/Youtube.png" style="width: 25px; padding-bottom: 3px;"></a>
+                <a id="Instagrambutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img src="../icons/Instagram.png" style="width: 25px;"></a>
+                <a id="Twitchbutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img src="../icons/Twitch.png" style="width: 25px;"></a>
+            </div>
+        </div>
+        <div class="row">
+
+            <div style="text-align: center; margin-top: 10px;">
+                <img src="../icons/Piyan.png" style="height: 25px; width: 25px; vertical-align: bottom;">
+                <span style="font-size: 18px; padding-left: 5px;">收取忠誠點數</span>
+                <input type="radio" name="Channel_Points" value="Click" checked="true">開啟
+                <input type="radio" name="Channel_Points" value="">關閉<br>
+            </div>
+            <div style="text-align: center; margin-top: 10px;">
+                <img src="../icons/gambling.png" style="height: 25px; width: 25px;  vertical-align: bottom;">
+                <span style="font-size: 18px; padding-left: 5px;">實況競猜提醒</span>
+                <input type="radio" name="Quiz" value="Notification" checked="true">開啟
+                <input type="radio" name="Quiz" value="">關閉
+            </div>
+        </div>
+        <div class="row" style="margin-top: 10px; text-align: center;">
+            <a id="submitButton" class="btn btn-primary btn-large btn-block" style="text-align: center;  cursor: pointer;"><span class="fui-msg"></span>提交</a>
+        </div>
+        <div class="row" style="text-align:right; padding-top: 10px;">
+            <span>給作者一點點鼓勵</span>
+            <a id="Sponsorbutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img src="../icons/Sponsor.png" style="width: 25px;"></a>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+<script src="../background/bg.js"></script>
+
+</html>
