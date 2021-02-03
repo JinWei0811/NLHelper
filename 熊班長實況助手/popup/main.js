@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function(dcle) {
 
     //#region icon, url
-    var buttonName = ["FBbutton", "Youtubebutton", "Instagrambutton", "Twitchbutton", "Sponsorbutton"];
+    var buttonName = ["FBbutton", "Youtubebutton", "Instagrambutton", "Twitchbutton", "GitHubrbutton"];
     var buttonUrl = ["https://www.facebook.com/NeVeRLosEs",
         "https://www.youtube.com/channel/UCRdJzOsu4MwKmY04vfAIDHw",
         "https://www.instagram.com/nln1nl/?hl=zh-tw",
         "https://www.twitch.tv/never_loses",
-
+        "https://github.com/JinWei0811/TwitchNLHelper",
     ];
     for (var i = 0; i < buttonName.length; i++) {
         var button = document.getElementById(buttonName[i]);
@@ -20,18 +20,20 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
     //#region check radio
     var dButtonEvent = document.getElementById("submitButton");
     dButtonEvent.addEventListener('click', function(e) {
-        var Total_Obj = document.getElementsByTagName("INPUT");
-        if (Total_Obj[0].checked)
-            autoClick = true;
-        else
-            autoClick = false;
+        var channelP = document.getElementsByName("Channel_Points");
+        var Notification = document.getElementsByName("Quiz");
 
-        if (Total_Obj[2].checked)
-            notification = true;
-        else
-            notification = false;
-        chrome.runtime.sendMessage({ sclick: autoClick, snotification: notification }, function(response) {});
+        channelP[0].checked ? autoClick = true : autoClick = false;
+        Notification[0].checked ? notification = true : notification = false;
+
+        chrome.runtime.sendMessage({ sclick: true, snotification: true }, function(response) {});
     });
+    //#endregion
+
+    //#region 
+    // var T_Obj = document.getElementsByTagName("INPUT");
+    // T_Obj[0].checked ? document.getElementById(autoClick).checked = true : document.getElementById(dontautoClick).checked = true;
+    // Total_Obj[2].checked ? document.getElementById(cannotifi).checked = true : document.getElementById(cantnotifi).checked = true;
     //#endregion
 });
 
