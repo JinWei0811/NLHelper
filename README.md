@@ -4,14 +4,23 @@
 
 
 ## 主要提供功能
+- 熊班長（NeVeR_LosEs）FaceBook 連結
+- 熊班長（NeVeR_LosEs）Youtube 連結
+- 熊班長（NeVeR_LosEs）Instagram 連結
+- 熊班長（NeVeR_LosEs）Twitch 連結
 - 自動點擊額外忠誠點數
 - 賭盤偵測提醒（但因Chrome插鍵限制1分鐘偵測一次，故有時沒偵測到或提醒時已快封盤）
+
 ![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/Notification.png "notification")
 <p>自動點擊、賭盤提醒皆可從選項中關閉，修改後需點擊 <font color=#FF0000>提交</font> 送出。</p>
 <p>預設兩者皆為開啟狀態。如果忘記原先設置的狀態如何，請重新提交。</p>
 <hr>
 
 ## 使用方式:
+![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/Github_Download.png "introduction")
+
+<p>先點擊Code（步驟1），接著點擊Download ZIP(步驟2），解壓縮之後按照下方步驟選擇「熊班長實況助手」(在TwitchNLHelper-main裡面）</p>
+
 <p><a href="https://www.alexclassroom.com/internet/google/google-chrome/how-to-manually-install-chrome-extension/">參考此連結安裝資料夾-TwitchLoyalty</a></p>
 
 <p>Chrome 打開班長實況台掛台</p>
