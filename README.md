@@ -6,8 +6,9 @@
 ## 主要提供功能
 - 自動點擊額外忠誠點數
 - 賭盤偵測提醒（但因Chrome插鍵限制1分鐘偵測一次，故有時沒偵測到或提醒時已快封盤）
-<p>自動點擊、賭盤提醒皆可從選項中關閉，修改後需點擊提交送出。</p>
-<p>預設兩者皆為開啟狀態。</p>
+![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/Notification. "notification")
+<p>自動點擊、賭盤提醒皆可從選項中關閉，修改後需點擊 <font color=#FF0000>提交</font> 送出。</p>
+<p>預設兩者皆為開啟狀態。如果忘記原先設置的狀態如何，請重新提交。</p>
 <hr>
 
 ## 使用方式:
@@ -27,7 +28,7 @@
 
 ## 相關授權：
 * 使用MIT授權條款
-* NL台相關圖片待取得使用許可
+* NL台相關圖片已取得使用許可
 * Rank&Link icon made by Freepik from www.flaticon.com, licensed under CC BY 3.0
 
 <hr>
@@ -41,8 +42,13 @@
 <hr>
 
 ## 更新資訊：
+<h4>1.0.6</h4>
+1. <strong>限定NeVeR_LosEs實況台</strong> <br>
+2. <strong>將Radio修改為CheckBox</strong> <br>
+3. <strong>新增GitHub、Chrome商店(待審核)按鈕</strong>
+
 <h4>1.0.5</h4>
-<p><strong>此為第一版</strong></p>
+1. <strong>此為第一版</strong>
 
 <hr>
 
