@@ -5,8 +5,8 @@
 
 ## 主要提供功能
 - 熊班長（NeVeR_LosEs）FaceBook 連結
-- 熊班長（NeVeR_LosEs）Instagram 連結
 - 熊班長（NeVeR_LosEs）Youtube 連結
+- 熊班長（NeVeR_LosEs）Instagram 連結
 - 熊班長（NeVeR_LosEs）Twitch 連結
 - 自動點擊額外忠誠點數
 - 賭盤偵測提醒（但因Chrome插鍵限制1分鐘偵測一次，故有時沒偵測到或提醒時已快封盤）
