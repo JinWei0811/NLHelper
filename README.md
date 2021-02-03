@@ -28,7 +28,7 @@
 
 ## 相關授權：
 * 使用MIT授權條款
-* NL台相關圖片待取得使用許可
+* NL台相關圖片已取得使用許可
 * Rank&Link icon made by Freepik from www.flaticon.com, licensed under CC BY 3.0
 
 <hr>
@@ -42,6 +42,11 @@
 <hr>
 
 ## 更新資訊：
+<h4>1.0.6</h4>
+<p><strong>限定NeVeR_LosEs實況台</strong></p>
+<p><strong>將Radio修改為CheckBox</strong></p>
+<p><strong>新增GitHub、Chrome商店(待審核)按鈕</strong></p>
+
 <h4>1.0.5</h4>
 <p><strong>此為第一版</strong></p>
 
