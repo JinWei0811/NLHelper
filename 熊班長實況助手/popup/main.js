@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
         channelP[0].checked ? autoClick = true : autoClick = false;
         Notification[0].checked ? notification = true : notification = false;
 
-        chrome.runtime.sendMessage({ sclick: true, snotification: true }, function(response) {});
+        chrome.runtime.sendMessage({ sclick: autoClick, snotification: notification }, function(response) {});
     });
     //#endregion
 
@@ -37,6 +37,6 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
     //#endregion
 });
 
-let autoClick;
-let notification;
+let autoClick = true;
+let notification = true;
 const app = document.getElementById("app")

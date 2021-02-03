@@ -14,6 +14,7 @@ chrome.runtime.onMessage.addListener(function(message, sendResponse) {
         sclick = message.sclick;
         snotification = message.snotification;
         canbet = message.content;
+        console.log(sclick, ' and ', snotification, ' and ', canbet);
         if (canbet === true && times === 0) {
             chromeNotification();
             canbet = false;
