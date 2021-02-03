@@ -43,12 +43,12 @@
 
 ## 更新資訊：
 <h4>1.0.6</h4>
-<p><strong>限定NeVeR_LosEs實況台</strong></p>
-<p><strong>將Radio修改為CheckBox</strong></p>
-<p><strong>新增GitHub、Chrome商店(待審核)按鈕</strong></p>
+1. <p><strong>限定NeVeR_LosEs實況台</strong></p>
+2. <p><strong>將Radio修改為CheckBox</strong></p>
+3. <p><strong>新增GitHub、Chrome商店(待審核)按鈕</strong></p>
 
 <h4>1.0.5</h4>
-<p><strong>此為第一版</strong></p>
+1. <p><strong>此為第一版</strong></p>
 
 <hr>
 
