@@ -12,6 +12,10 @@
 <hr>
 
 ## 使用方式:
+![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/Github_Download.png "introduction")
+
+<p>先點擊Code（步驟1），接著點擊Download ZIP(步驟2），解壓縮之後按照下方步驟選擇「熊班長實況助手」(在TwitchNLHelper-main裡面）</p>
+
 <p><a href="https://www.alexclassroom.com/internet/google/google-chrome/how-to-manually-install-chrome-extension/">參考此連結安裝資料夾-TwitchLoyalty</a></p>
 
 <p>Chrome 打開班長實況台掛台</p>
