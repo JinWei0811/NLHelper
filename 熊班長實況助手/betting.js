@@ -9,7 +9,7 @@ function detectBet() {
         var bettest = document.getElementsByClassName("predictions-list-item__body tw-align-items-center tw-border-radius-medium tw-c-background-alt tw-flex tw-full-width")[0];
         bettest.click();
         var bettest0 = document.getElementsByClassName("fixed-prediction-button fixed-prediction-button--blue tw-align-items-center tw-border-radius-small tw-flex tw-pd-x-1 tw-pd-y-05")[0];
-        // console.log(currentDateTime, '  bettest0  ', bettest0);
+        console.log(currentDateTime, '  bettest0  ', bettest0);
         if (bettest0 !== undefined) {
             chrome.runtime.sendMessage({ content: true });
         }

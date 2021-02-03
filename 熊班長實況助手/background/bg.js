@@ -1,5 +1,5 @@
 //this is background js 
-// console.log("chrome extension background is runing!")
+console.log("chrome extension background is runing!")
 var canbet;
 var times = 0;
 var sclick = true;
@@ -36,13 +36,15 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
         tabs.forEach(tab => {
             var url = new URL(tab.url);
             var domain = url.hostname;
+            var href = url.href;
             if (domain === "www.twitch.tv") {
                 console.log("Get Twitch Pages:" + url);
-                console.log(currentDateTime, ' detectbet and click');
                 if (sclick) {
+                    console.log(currentDateTime, ' click');
                     chrome.tabs.executeScript(tab.id, { file: "/execute.js" });
                 }
-                if (snotification) {
+                if (snotification && href === "https://www.twitch.tv/never_loses") {
+                    console.log(currentDateTime, ' detectbet');
                     chrome.tabs.executeScript(tab.id, { file: "/betting.js" });
                 }
             }
