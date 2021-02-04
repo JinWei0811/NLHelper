@@ -51,6 +51,10 @@
 <hr>
 
 ## 更新資訊：
+
+<h4>1.0.7</h4>
+1. <strong>修正競猜提醒後，不會繼續收忠誠點數</strong> <br>
+
 <h4>1.0.6</h4>
 1. <strong>限定NeVeR_LosEs實況台</strong> <br>
 2. <strong>將Radio修改為CheckBox</strong> <br>
