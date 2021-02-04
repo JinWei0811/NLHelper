@@ -11,9 +11,15 @@ var alarmInfo = {
 
 chrome.runtime.onMessage.addListener(function(message, sendResponse) {
     try {
-        sclick = message.sclick;
-        snotification = message.snotification;
-        canbet = message.content;
+        if (sclick !== undefined) {
+            sclick = message.sclick;
+        }
+        if (snotification !== undefined) {
+            snotification = message.snotification;
+        }
+        if (canbet !== undefined) {
+            canbet = message.content;
+        }
         console.log(sclick, ' and ', snotification, ' and ', canbet);
         if (canbet === true && times === 0) {
             chromeNotification();
@@ -38,7 +44,8 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
             var domain = url.hostname;
             var href = url.href;
             if (domain === "www.twitch.tv") {
-                console.log("Get Twitch Pages:" + url);
+                console.log(currentDateTime + " Get Twitch Pages: " + url);
+                console.log(sclick, ' and ', snotification, ' and ', canbet);
                 if (sclick) {
                     console.log(currentDateTime, ' click');
                     chrome.tabs.executeScript(tab.id, { file: "/execute.js" });
