@@ -7,7 +7,7 @@ function goToActivityTab() {
         var nowt = today.getSeconds() < 10 ? "0" + today.getSeconds() : today.getSeconds();
         var currentDateTime = today.getHours() + ':' + nowm + ":" + nowt;
         var activityTab = document.getElementsByClassName("tw-button tw-button--success")[0];
-        // console.log(currentDateTime + '  Click');
+        console.log(currentDateTime + '  Point Detect');
         // console.log(activityTab);
         if (startClick && activityTab != undefined) {
             activityTab.click();
