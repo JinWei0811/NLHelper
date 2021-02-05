@@ -25,10 +25,13 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
 
         channelP[0].checked ? autoClick = true : autoClick = false;
         Notification[0].checked ? notification = true : notification = false;
-
-        chrome.runtime.sendMessage({ sclick: autoClick, snotification: notification }, function(response) {});
+        chrome.runtime.sendMessage({ sclick: autoClick, snotification: notification });
+        var showSuccess = document.getElementById("submitSuccess");
+        showSuccess.style.display = "";
+        setTimeout(disappear_show, 1000);
     });
     //#endregion
+
 
     //#region 
     // var T_Obj = document.getElementsByTagName("INPUT");
@@ -37,6 +40,33 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
     //#endregion
 });
 
+function disappear_show() {
+    var showSuccess = document.getElementById("submitSuccess");
+    showSuccess.style.display = "none";
+}
+
+function get_detail() {
+    chrome.runtime.sendMessage({ plsSendBack: true });
+}
+
+chrome.runtime.onMessage.addListener(function(message) {
+    try {
+        var testp = document.getElementsByTagName('input');
+        // testp[0].checked = false;
+        if (message.checkclick !== undefined) {
+            message.checkclick === true ? testp[0].checked = true : testp[0].checked = false;
+        }
+        if (message.checknotification !== undefined) {
+            message.checknotification === true ? testp[1].checked = true : testp[1].checked = false;
+        }
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+get_detail();
+
 let autoClick = true;
 let notification = true;
+console.log(autoClick, '  ', notification);
 const app = document.getElementById("app")

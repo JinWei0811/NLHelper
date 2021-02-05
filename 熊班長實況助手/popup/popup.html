@@ -24,19 +24,24 @@
             <div style="text-align: center; margin-top: 10px;">
                 <img src="../icons/Piyan.png" style="height: 25px; width: 25px; vertical-align: bottom;">
                 <span style="font-size: 18px; padding-left: 5px;">收取忠誠點數</span>
-                <input id="autoClick" type="checkbox" name="Channel_Points" value="Click" checked>開啟
+                <input id="autoClick" type="checkbox" name="Channel_Points" value="Click">開啟
             </div>
             <div style="text-align: center; margin-top: 10px;">
                 <img src="../icons/gambling.png" style="height: 25px; width: 25px;  vertical-align: bottom;">
                 <span style="font-size: 18px; padding-left: 5px;">實況競猜提醒</span>
-                <input id="cannotifi" type="checkbox" name="Quiz" value="Notification" checked>開啟
+                <input id="cannotifi" type="checkbox" name="Quiz" value="Notification">開啟
             </div>
         </div>
         <div class="row" style="margin-top: 10px; text-align: center;">
-            <a id="submitButton" class="btn btn-primary btn-large btn-block" style="text-align: center;  cursor: pointer;"><span class="fui-msg"></span>提交</a>
+            <div style="margin-bottom: 7px;">
+                <span id="submitSuccess" style="display:none">提交成功</span>
+            </div>
+            <div>
+                <a id="submitButton" class="btn btn-primary btn-large btn-block" style="text-align: center;  cursor: pointer;"><span class="fui-msg"></span>提交</a>
+            </div>
         </div>
         <div class="row" style="text-align: center; ">
-            <span style="position: absolute; left: 0px; bottom: 0px; color: white; background-color: gray;">v 1.0.7</span>
+            <span style="position: absolute; left: 0px; bottom: 0px; color: white; background-color: gray;">v 1.0.8</span>
             <span style="position: absolute; right: 85px; bottom: 0px;">Github、Chrome商店</span>
             <a id="GitHubrbutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img src="../icons/GitHub.png" style="width: 25px; position:absolute; right:50px;"></a>
             <a id="Chrome_Storebutton" class="btn btn-default" style="margin: 10px; cursor: not-allowed;;"><img src="../icons/chrome_store.png" style="width: 25px; -webkit-filter: grayscale(1); position:absolute; right:10px;"></a>

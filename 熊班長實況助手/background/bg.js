@@ -9,16 +9,19 @@ var alarmInfo = {
     periodInMinutes: 1
 }
 
-chrome.runtime.onMessage.addListener(function(message, sendResponse) {
+chrome.runtime.onMessage.addListener(function(message) {
     try {
-        if (sclick !== undefined) {
+        if (message.sclick !== undefined) {
             sclick = message.sclick;
         }
-        if (snotification !== undefined) {
+        if (message.snotification !== undefined) {
             snotification = message.snotification;
         }
-        if (canbet !== undefined) {
+        if (message.canbet !== undefined) {
             canbet = message.content;
+        }
+        if (message.plsSendBack !== undefined) {
+            chrome.runtime.sendMessage({ checkclick: sclick, checknotification: snotification });
         }
         console.log(sclick, ' and ', snotification, ' and ', canbet);
         if (canbet === true && times === 0) {

@@ -13,8 +13,8 @@ function detectBet() {
         if (bettest0 !== undefined) {
             chrome.runtime.sendMessage({ content: true });
         }
-
-        activityTabbet.click();
+        var close = document.getElementsByClassName("tw-align-items-center tw-align-middle tw-border-bottom-left-radius-medium tw-border-bottom-right-radius-medium tw-border-top-left-radius-medium tw-border-top-right-radius-medium tw-button-icon tw-button-icon--secondary tw-core-button tw-inline-flex tw-justify-content-center tw-overflow-hidden tw-relative");
+        close.click();
         // console.log(currentDateTime + ' detectbet');
     } catch (error) {}
 

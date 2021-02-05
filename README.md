@@ -52,6 +52,13 @@
 
 ## 更新資訊：
 
+<h4>1.0.8</h4>
+1. <strong>修正提交後顯示問題</strong> <br>
+2. <strong>修正錯誤（感謝頭痛寶寶反映）</strong> <br>
+3. <strong>修正能正確關閉忠誠點數按鈕</strong> <br>
+4. <strong>新增提交成功提示</strong>
+
+
 <h4>1.0.7</h4>
 1. <strong>修正競猜提醒後，不會繼續收忠誠點數</strong> <br>
 2. <strong>新增顯示版本</strong>
