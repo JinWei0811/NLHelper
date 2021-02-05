@@ -52,6 +52,13 @@
 
 ## 更新資訊：
 
+<h4>1.0.9</h4>
+1. <strong>修正賭盤監測Bug</strong> <br>
+2. <strong>如果不確定他是否有進行監測，可以開F12監聽</strong> <br>
+![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/Detection.png "Detection")
+
+
+
 <h4>1.0.8</h4>
 1. <strong>修正提交後顯示問題</strong> <br>
 2. <strong>修正錯誤（感謝頭痛寶寶反映）</strong> <br>
