@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(dcle) {
 
     //#region icon, url
-    var buttonName = ["FBbutton", "Youtubebutton", "Instagrambutton", "Twitchbutton", "GitHubrbutton"];
+    var buttonName = ["FBbutton", "Youtubebutton", "Instagrambutton", "Twitchbutton", "GitHubrbutton", "ChromeStorebutton"];
     var buttonUrl = ["https://www.facebook.com/NeVeRLosEs",
         "https://www.youtube.com/channel/UCRdJzOsu4MwKmY04vfAIDHw",
         "https://www.instagram.com/nln1nl/?hl=zh-tw",
         "https://www.twitch.tv/never_loses",
         "https://github.com/JinWei0811/TwitchNLHelper",
+        "https://chrome.google.com/webstore/detail/nlnlouo/dhokajppblijnlidbgdphkpjbocpnhec?hl=zh-TW&authuser=0",
     ];
     for (var i = 0; i < buttonName.length; i++) {
         var button = document.getElementById(buttonName[i]);

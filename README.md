@@ -2,6 +2,9 @@
 
 ![GITHUB]( https://github.com/JinWei0811/-/blob/main/interface.png "interface")
 
+## 給作者一點鼓勵：
+街口支付連結：https://www.jkopay.com/transfer?j=Transfer:901329725
+![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/JKOPay.png "JKOPay")
 
 ## 主要提供功能
 - <p><a href="https://www.facebook.com/NeVeRLosEs">熊班長（NeVeR_LosEs）FaceBook 連結</a></p>
@@ -52,12 +55,15 @@
 
 ## 更新資訊：
 
+<h4>1.0.10</h4>
+1. <strong>修正部分已知Bug</strong> <br>
+2. <strong>添加Chrome商店按鈕網址</strong>
+
 <h4>1.0.9</h4>
 1. <strong>修正賭盤監測Bug</strong> <br>
 2. <strong>如果不確定他是否有進行監測，可以按F12到Console監測</strong> <br>
 
 ![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/Detection.png "Detection")
-
 
 
 <h4>1.0.8</h4>
@@ -80,5 +86,3 @@
 1. <strong>此為第一版</strong>
 
 <hr>
-
-## 給作者一點鼓勵：

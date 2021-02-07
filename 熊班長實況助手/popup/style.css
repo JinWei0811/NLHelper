@@ -8,7 +8,7 @@ H1 {
 }
 
 #app {
-    height: 200px;
+    height: 250px;
     width: 400px;
     display: flex;
     flex-wrap: wrap;
