@@ -4,8 +4,7 @@
 
 ## 給作者一點鼓勵：
 街口支付連結：https://www.jkopay.com/transfer?j=Transfer:901329725 <br>
-![GITHUB]( https://github.com/JinWei0811/NLHelper/blob/main/JKOPay.jpg "JKOPay"){:height="373x" width="300px"}
-
+![GITHUB]( https://github.com/JinWei0811/NLHelper/blob/main/JKOPay.jpg "JKOPay")
 ## 主要提供功能
 - <p><a href="https://www.facebook.com/NeVeRLosEs">熊班長（NeVeR_LosEs）FaceBook 連結</a></p>
 - <p><a href="https://www.youtube.com/channel/UCRdJzOsu4MwKmY04vfAIDHw">熊班長（NeVeR_LosEs）Youtube 連結</a></p>
