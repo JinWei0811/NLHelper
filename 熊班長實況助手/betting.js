@@ -30,7 +30,7 @@ function detectBet() {
 }
 
 function activityTabbetC() {
-    var activityTabbet = document.getElementsByClassName("tw-align-items-center tw-align-middle tw-border-bottom-left-radius-medium tw-border-bottom-right-radius-medium tw-border-top-left-radius-medium tw-border-top-right-radius-medium tw-core-button tw-core-button--text tw-inline-flex tw-justify-content-center tw-overflow-hidden tw-relative")[0];
+    var activityTabbet = document.getElementsByClassName("ScCoreButton-sc-1qn4ixc-0 ScCoreButtonText-sc-1qn4ixc-3 kGWcAX tw-core-button")[0];
     activityTabbet.click();
 }
 
@@ -40,7 +40,7 @@ function bettestC() {
 }
 
 function closeC() {
-    var closee = document.getElementsByClassName("tw-align-items-center tw-align-middle tw-border-bottom-left-radius-medium tw-border-bottom-right-radius-medium tw-border-top-left-radius-medium tw-border-top-right-radius-medium tw-button-icon tw-button-icon--secondary tw-core-button tw-inline-flex tw-justify-content-center tw-overflow-hidden tw-relative");
+    var closee = document.getElementsByClassName("ScCoreButton-sc-1qn4ixc-0 ScCoreButtonText-sc-1qn4ixc-3 kGWcAX tw-core-button");
     closee.click();
 }
 detectBet();

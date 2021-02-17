@@ -54,6 +54,9 @@
 
 ## 更新資訊：
 
+<h4>1.0.11</h4>
+1. <strong>修正賭盤監測Bug</strong>
+
 <h4>1.0.10</h4>
 1. <strong>修正部分已知Bug</strong> <br>
 2. <strong>添加Chrome商店按鈕網址</strong>
