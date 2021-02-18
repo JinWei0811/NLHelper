@@ -4,43 +4,31 @@ function detectBet() {
         var nowm = today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes();
         var nowt = today.getSeconds() < 10 ? "0" + today.getSeconds() : today.getSeconds();
         var currentDateTime = today.getHours() + ':' + nowm + ":" + nowt;
-        // var activityTabbet = document.getElementsByClassName("tw-align-items-center tw-align-middle tw-border-bottom-left-radius-medium tw-border-bottom-right-radius-medium tw-border-top-left-radius-medium tw-border-top-right-radius-medium tw-core-button tw-core-button--text tw-inline-flex tw-justify-content-center tw-overflow-hidden tw-relative")[0];
-        // activityTabbet.click();
-        setTimeout(activityTabbetC, 100);
-        // var bettest = document.getElementsByClassName("predictions-list-item__body tw-align-items-center tw-border-radius-medium tw-c-background-alt tw-flex tw-full-width")[0];
-        // bettest.click();
-        setTimeout(bettestC, 400);
-        // console.log('click2');
-        var bettest0 = document.getElementsByClassName("fixed-prediction-button fixed-prediction-button--blue tw-align-items-center tw-border-radius-small tw-flex tw-pd-x-1 tw-pd-y-05")[0];
-        // console.log(currentDateTime, '  bettest0  ', bettest0);
-        if (bettest0 !== undefined) {
-            chrome.runtime.sendMessage({ content: true });
-        }
-        var close = document.getElementsByClassName("ScAspectRatio-sc-1sw3lwy-1 dNNaBC tw-aspect")[0];
-        // var close = document.getElementsByClassName("tw-align-items-center tw-align-middle tw-border-bottom-left-radius-medium tw-border-bottom-right-radius-medium tw-border-top-left-radius-medium tw-border-top-right-radius-medium tw-button-icon tw-button-icon--secondary tw-core-button tw-inline-flex tw-justify-content-center tw-overflow-hidden tw-relative");
-        // close.click();
-        setTimeout(activityTabbetC, 700);
-        // console.log('click3 ', close);
+        console.log(currentDateTime + '  Bet Detect');
 
-        // console.log(currentDateTime + ' detectbet');
+        // 開啟第一層
+        var activityTabbet = document.getElementsByClassName("ScCoreButton-sc-1qn4ixc-0 ScCoreButtonText-sc-1qn4ixc-3 kGWcAX tw-core-button")[0];
+        // 開啟第二層
+        var bettest = document.getElementsByClassName("predictions-list-item__body tw-align-items-center tw-border-radius-medium tw-c-background-alt tw-flex tw-full-width")[0];
+        // 檢查可否下注
+        var bettest0 = document.getElementsByClassName("fixed-prediction-button fixed-prediction-button--blue tw-align-items-center tw-border-radius-small tw-flex tw-pd-x-1 tw-pd-y-05")[0];
+
+        activityTabbet.click(); // First On
+        if (bettest !== undefined) {
+            bettest.click(); // Second On
+            if (bettest0 !== undefined) {
+                chrome.runtime.sendMessage({ content: true });
+                activityTabbet.click();
+            } else {
+                activityTabbet.click();
+            }
+        } else {
+            activityTabbet.click(); // 無偵測到第二層則關閉
+        }
+
     } catch (error) {
         console.log(error);
     }
-
 }
 
-function activityTabbetC() {
-    var activityTabbet = document.getElementsByClassName("ScCoreButton-sc-1qn4ixc-0 ScCoreButtonText-sc-1qn4ixc-3 kGWcAX tw-core-button")[0];
-    activityTabbet.click();
-}
-
-function bettestC() {
-    var bettest = document.getElementsByClassName("predictions-list-item__body tw-align-items-center tw-border-radius-medium tw-c-background-alt tw-flex tw-full-width")[0];
-    bettest.click();
-}
-
-function closeC() {
-    var closee = document.getElementsByClassName("ScCoreButton-sc-1qn4ixc-0 ScCoreButtonText-sc-1qn4ixc-3 kGWcAX tw-core-button");
-    closee.click();
-}
 detectBet();

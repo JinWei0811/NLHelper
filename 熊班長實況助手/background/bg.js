@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener(function(message) {
         if (message.snotification !== undefined) {
             snotification = message.snotification;
         }
-        if (message.canbet !== undefined) {
+        if (message.content !== undefined) {
             canbet = message.content;
         }
         if (message.plsSendBack !== undefined) {
