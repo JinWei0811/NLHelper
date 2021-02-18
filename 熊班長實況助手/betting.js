@@ -4,7 +4,7 @@ function detectBet() {
         var nowm = today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes();
         var nowt = today.getSeconds() < 10 ? "0" + today.getSeconds() : today.getSeconds();
         var currentDateTime = today.getHours() + ':' + nowm + ":" + nowt;
-        console.log(currentDateTime + '  Bet Detect');
+        // console.log(currentDateTime + '  Bet Detect');
 
         // 開啟第一層
         var activityTabbet = document.getElementsByClassName("ScCoreButton-sc-1qn4ixc-0 ScCoreButtonText-sc-1qn4ixc-3 kGWcAX tw-core-button")[0];
