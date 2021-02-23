@@ -54,6 +54,9 @@
 
 ## 更新資訊：
 
+<h4>1.0.13</h4>
+1. <strong>第N次修正賭盤監測Bug T_T </strong>
+
 <h4>1.0.12</h4>
 1. <strong>修正賭盤監測Bug</strong>
 
