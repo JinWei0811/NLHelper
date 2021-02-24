@@ -54,6 +54,10 @@
 
 ## 更新資訊：
 
+<h4>1.0.14</h4>
+1. <strong>新增Discord按鈕</strong>
+2. <strong>修正已知錯誤</strong>
+
 <h4>1.0.13</h4>
 1. <strong>第N次修正賭盤監測Bug T_T </strong>
 

@@ -48,7 +48,7 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
             var href = url.href;
             if (domain === "www.twitch.tv") {
                 console.log(currentDateTime + " Get Twitch Pages: " + url);
-                console.log(sclick, ' and ', snotification, ' and ', canbet);
+                console.log(sclick, ' and ', snotification, ' and ', canbet, ' and ', times);
                 if (sclick) {
                     console.log(currentDateTime, ' click');
                     chrome.tabs.executeScript(tab.id, { file: "/execute.js" });
