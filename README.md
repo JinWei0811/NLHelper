@@ -10,7 +10,9 @@
 - <p><a href="https://www.youtube.com/channel/UCRdJzOsu4MwKmY04vfAIDHw">熊班長（NeVeR_LosEs）Youtube 連結</a></p>
 - <p><a href="https://www.instagram.com/nln1nl/?hl=zh-tw">熊班長（NeVeR_LosEs）Instagram 連結</a></p>
 - <p><a href="https://www.twitch.tv/never_loses">熊班長（NeVeR_LosEs）Twitch 連結</a></p>
-- 自動點擊額外忠誠點數
+- <p><a href="https://discord.com/invite/Ycf9Gsxy2A">熊班長（NeVeR_LosEs）Discord 連結</a></p>
+
+- 自動點擊額外忠誠點數（大部分Twitch實況台皆會點擊）
 - 賭盤偵測提醒（但因Chrome插鍵限制1分鐘偵測一次，故有時沒偵測到或提醒時已快封盤）
 
 ![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/Notification.png "notification")
@@ -55,7 +57,7 @@
 ## 更新資訊：
 
 <h4>1.0.14</h4>
-1. <strong>新增Discord按鈕</strong>
+1. <strong>新增Discord按鈕</strong> <br>
 2. <strong>修正已知錯誤</strong>
 
 <h4>1.0.13</h4>
