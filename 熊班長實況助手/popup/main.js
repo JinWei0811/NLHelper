@@ -66,9 +66,12 @@ chrome.runtime.onMessage.addListener(function(message) {
     }
 });
 
+let autoClick;
+let notification;
 get_detail();
-
-let autoClick = true;
-let notification = true;
+if (autoClick === undefined)
+    autoClick = true;
+if (notification === undefined)
+    notification = true;
 console.log(autoClick, '  ', notification);
 const app = document.getElementById("app")

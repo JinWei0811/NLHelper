@@ -2,13 +2,17 @@
 console.log("chrome extension background is runing!")
 var canbet;
 var times = 0;
-var sclick = true;
-var snotification = true;
+var sclick;
+var snotification;
 var alarmInfo = {
     delayInMinutes: 1,
     periodInMinutes: 1
 }
 
+if (sclick === undefined)
+    sclick = true;
+if (snotification === undefined)
+    snotification = true;
 chrome.runtime.onMessage.addListener(function(message) {
     try {
         if (message.sclick !== undefined) {

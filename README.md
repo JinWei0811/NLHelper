@@ -55,6 +55,8 @@
 <hr>
 
 ## 更新資訊：
+<h4>1.0.15</h4>
+1. <strong>優化判斷</strong>
 
 <h4>1.0.14</h4>
 1. <strong>新增Discord按鈕</strong> <br>
