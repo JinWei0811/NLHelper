@@ -12,7 +12,7 @@ var alarmInfo = {
 if (sclick === undefined)
     sclick = true;
 if (snotification === undefined)
-    snotification = true;
+    snotification = false;
 chrome.runtime.onMessage.addListener(function(message) {
     try {
         if (message.sclick !== undefined) {

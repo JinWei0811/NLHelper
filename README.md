@@ -55,6 +55,12 @@
 <hr>
 
 ## 更新資訊：
+
+<h4>1.0.15</h4>
+1. <strong>優化實況競猜判斷（感謝西居、kypss910078回報）</strong> <br>
+2. <strong>實況競猜預設關閉</strong> <br>
+3. <strong>預期優化實況競猜判斷方式</strong>
+
 <h4>1.0.15</h4>
 1. <strong>優化判斷</strong>
 

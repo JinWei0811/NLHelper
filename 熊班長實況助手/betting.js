@@ -6,6 +6,11 @@ function detectBet() {
         // var currentDateTime = today.getHours() + ':' + nowm + ":" + nowt;
         // console.log(currentDateTime + '  Bet Detect');
         // var activityFirst = document.getElementsByClassName("ScCoreButton-sc-1qn4ixc-0 ScCoreButtonText-sc-1qn4ixc-3 kGWcAX tw-core-button")[0];
+        var prediction = document.getElementsByClassName("community-prediction-highlight-header__title")[0];
+        // console.log(prediction);
+        // if (prediction !== undefined) {
+        //     chrome.runtime.sendMessage({ content: true });
+        // }
         activityF(); // 打開第一層
 
         setTimeout(activityS, 300); // 0.3S 如果有第二層則打開

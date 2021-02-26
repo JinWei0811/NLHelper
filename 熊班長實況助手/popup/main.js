@@ -72,6 +72,6 @@ get_detail();
 if (autoClick === undefined)
     autoClick = true;
 if (notification === undefined)
-    notification = true;
+    notification = false;
 console.log(autoClick, '  ', notification);
 const app = document.getElementById("app")
