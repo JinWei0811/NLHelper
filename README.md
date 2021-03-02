@@ -17,7 +17,7 @@
 
 ![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/Notification.png "notification")
 <p>自動點擊、賭盤提醒皆可從選項中關閉，修改後需點擊 <font color=#FF0000>提交</font> 送出。</p>
-<p>預設兩者皆為開啟狀態。如果忘記原先設置的狀態如何，請重新提交。</p>
+<p>收忠誠點數預設為開啟狀態，賭盤提醒則為關閉。如果忘記原先設置的狀態如何，請重新提交。</p>
 <hr>
 
 ## 使用方式:
