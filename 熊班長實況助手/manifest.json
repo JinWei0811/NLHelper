@@ -15,7 +15,7 @@
     },
     "background": {
         "page": "background/bg.html",
-        "persistent": false
+        "persistent": true
     },
     "permissions": [
         "*://*.twitch.tv/never_loses",
