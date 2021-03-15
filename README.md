@@ -56,6 +56,9 @@
 
 ## 更新資訊：
 
+<h4>1.0.17</h4>
+1. <strong>修正實況競猜提交失敗（感謝ieqaq回報）</strong> <br>
+
 <h4>1.0.16</h4>
 1. <strong>優化實況競猜判斷（感謝西居、kypss910078回報）</strong> <br>
 2. <strong>實況競猜預設關閉</strong> <br>
