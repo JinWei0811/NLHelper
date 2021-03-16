@@ -71,3 +71,7 @@ let notification;
 get_detail();
 console.log(autoClick, '  ', notification);
 const app = document.getElementById("app")
+
+fetch('../manifest.json').then(response => {
+    return response.json();
+}).then(data => document.getElementById("version").innerHTML = `${data.version}`);
