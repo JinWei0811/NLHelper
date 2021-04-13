@@ -1,6 +1,6 @@
 # 熊班長實況助手
 
-![GITHUB]( https://github.com/JinWei0811/-/blob/main/interface.png "interface")
+![GITHUB]( https://github.com/JinWei0811/NLHelper/blob/main/interface.gif "interface")
 
 ## 給作者一點鼓勵：
 <img src="https://github.com/JinWei0811/NLHelper/blob/main/JKOPay.png" width=180 height=211>
