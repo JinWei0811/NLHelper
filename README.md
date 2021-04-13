@@ -3,8 +3,9 @@
 ![GITHUB]( https://github.com/JinWei0811/-/blob/main/interface.png "interface")
 
 ## 給作者一點鼓勵：
-<img src="https://github.com/JinWei0811/NLHelper/blob/main/JKOPay.png" width=180 height=211 />
+<img src="https://github.com/JinWei0811/NLHelper/blob/main/JKOPay.png" width=180 height=211>
 <img src="https://github.com/JinWei0811/NLHelper/blob/main/Linepay.png" width=175 height=211>
+
 ## 主要提供功能
 - <p><a href="https://www.facebook.com/NeVeRLosEs">熊班長（NeVeR_LosEs）FaceBook 連結</a></p>
 - <p><a href="https://www.youtube.com/channel/UCRdJzOsu4MwKmY04vfAIDHw">熊班長（NeVeR_LosEs）Youtube 連結</a></p>

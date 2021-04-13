@@ -13,7 +13,9 @@
 
 <body>
 
-    <H1 style="text-align: center; font-size: 24px;"><img src="../icons/nlnlOUO128.jpg" style="height: 30px; vertical-align: bottom;">熊班長實況助手<img src="../icons/nlnlOUO_HF.png" style="height: 30px; vertical-align: bottom;"></H1>
+    <H1 style="text-align: center; font-size: 24px;"><img src="../icons/nlnlOUO128.jpg"
+            style="height: 30px; vertical-align: bottom;">熊班長實況助手<img src="../icons/nlnlOUO_HF.png"
+            style="height: 30px; vertical-align: bottom;"></H1>
     <div class="container">
         <div class="row">
             <div>
@@ -44,16 +46,20 @@
                 <tbody>
                     <tr>
                         <td>
-                            <button class="tablinks button" id="FeaturesList" style="background-color: rgb(4, 59, 68);">功能<br>列表</button>
+                            <button class="tablinks button" id="FeaturesList"
+                                style="background-color: rgb(4, 59, 68);">功能<br>列表</button>
                         </td>
                         <td>
-                            <button class="tablinks button" id="PointsList" style="background-color: rgb(8, 130, 151);">忠誠<br>點數</button>
+                            <button class="tablinks button" id="PointsList"
+                                style="background-color: rgb(8, 130, 151);">忠誠<br>點數</button>
                         </td>
                         <td>
-                            <button class="tablinks button" id="AllLink" style="background-color: rgb(8, 130, 151);">相關<br>連結</button>
+                            <button class="tablinks button" id="AllLink"
+                                style="background-color: rgb(8, 130, 151);">相關<br>連結</button>
                         </td>
                         <td>
-                            <button class="tablinks button" id="AboutAuthor" style="background-color: rgb(8, 130, 151);">關於<br>作者</button>
+                            <button class="tablinks button" id="AboutAuthor"
+                                style="background-color: rgb(8, 130, 151);">關於<br>作者</button>
                         </td>
                     </tr>
                 </tbody>
@@ -77,18 +83,26 @@
                     <span id="submitSuccess" style="display:none">提交成功</span>
                 </div>
                 <div>
-                    <a id="submitButton" class="btn btn-primary btn-large btn-block" style="text-align: center;  cursor: pointer;"><span class="fui-msg"></span>提交</a>
+                    <a id="submitButton" class="btn btn-primary btn-large btn-block"
+                        style="text-align: center;  cursor: pointer;"><span class="fui-msg"></span>提交</a>
                 </div>
             </div>
         </div>
         <div id="Points" class="tabContent" style="display: none;">
             <div class="row">
-                <div class="labelMargin">
-                    <label class="featureSpan">額外忠誠點數：<span id="ClickTimes">NaN</span>次</label>
+                <div class="labelMargin" style="color: gray;">
+                    <label class="featureSpan">自動點擊次數：<span id="ClickTimes">NaN</span>次</label>
                 </div>
-                <!-- <div class="labelMargin">
+                <div class="labelMargin" style="color: gray;">
                     <label class="featureSpan">忠誠點數增長：<span id="PointsStatus">NaN</span></label>
-                </div> -->
+                </div>
+                <div class="labelMargin" style="color: gray;">
+                    <span class="featureSpan">自動實況競猜</span>
+                    <input id="cannotifi" type="checkbox" name="Quiz" value="Notification" disabled>開啟
+                </div>
+                <div class="labelMargin">
+                    <span class="featureSpan" style="color: red;">此頁功能待完善</span>
+                </div>
             </div>
         </div>
         <div id="AllLinkPage" class="tabContent" style="display: none;">
@@ -96,37 +110,45 @@
                 <tbody>
                     <tr>
                         <td style="text-align: center;">
-                            <a id="FBbutton" class="btn btn-default imgBtn"><img src="../icons/FB.png" style="width: 25px;" title="熊班長FB"></a>
+                            <a id="FBbutton" class="btn btn-default imgBtn"><img src="../icons/FB.png"
+                                    style="width: 25px;" title="熊班長FB"></a>
                             <span style="font-size: small;">Facebook</span>
                         </td>
                         <td style="text-align: center;">
-                            <a id="Youtubebutton" class="btn btn-default imgBtn"><img src="../icons/Youtube.png" style="width: 25px; padding-bottom: 3px;" title="熊班長YT"></a>
+                            <a id="Youtubebutton" class="btn btn-default imgBtn"><img src="../icons/Youtube.png"
+                                    style="width: 25px; padding-bottom: 3px;" title="熊班長YT"></a>
                             <span style="font-size: small;">Youtube</span>
                         </td>
                         <td style="text-align: center;">
-                            <a id="Instagrambutton" class="btn btn-default imgBtn"><img src="../icons/Instagram.png" style="width: 25px;" title="熊班長IG"></a>
+                            <a id="Instagrambutton" class="btn btn-default imgBtn"><img src="../icons/Instagram.png"
+                                    style="width: 25px;" title="熊班長IG"></a>
                             <span style="font-size: small;">Instagram</span>
                         </td>
                         <td style="text-align: center;">
-                            <a id="Twitchbutton" class="btn btn-default imgBtn"><img src="../icons/Twitch.png" style="width: 25px;" title="熊班長Twitch"></a>
+                            <a id="Twitchbutton" class="btn btn-default imgBtn"><img src="../icons/Twitch.png"
+                                    style="width: 25px;" title="熊班長Twitch"></a>
                             <span style="font-size: small;">Twitch</span>
                         </td>
                     </tr>
                     <tr style="padding-top: 10px;">
                         <td style="text-align: center; vertical-align: bottom;">
-                            <a id="Discordbutton" class="btn btn-default imgBtn"><img src="../icons/Discord.png" style="width: 25px;" title="熊班長DC群"></a>
+                            <a id="Discordbutton" class="btn btn-default imgBtn"><img src="../icons/Discord.png"
+                                    style="width: 25px;" title="熊班長DC群"></a>
                             <span style=" font-size: small;">Discord</span>
                         </td>
                         <td style="text-align: center;">
-                            <a id="LineCommunitybutton" class="btn btn-default imgBtn"><img src="../icons/LineCommunity.png" style="width: 25px;" title="熊班長Line社群"></a>
+                            <a id="LineCommunitybutton" class="btn btn-default imgBtn"><img
+                                    src="../icons/LineCommunity.png" style="width: 25px;" title="熊班長Line社群"></a>
                             <span style="font-size: small;">Line社群</span>
                         </td>
                         <td style="text-align: center;">
-                            <a id="LineSticker1button" class="btn btn-default imgBtn"><img src="../icons/LineSticker1.png" style="width: 25px;" title="熊班長貼圖"></a>
+                            <a id="LineSticker1button" class="btn btn-default imgBtn"><img
+                                    src="../icons/LineSticker1.png" style="width: 25px;" title="熊班長貼圖"></a>
                             <span style="font-size: small;">nlnlOuO#1</span>
                         </td>
                         <td>
-                            <a id="LineSticker2button" class="btn btn-default imgBtn"><img src="../icons/LineSticker2.png" style="width: 25px;" title="熊班長貼圖"></a>
+                            <a id="LineSticker2button" class="btn btn-default imgBtn"><img
+                                    src="../icons/LineSticker2.png" style="width: 25px;" title="熊班長貼圖"></a>
                             <span style="font-size: small;">nlnlOuO#2</span>
                         </td>
                         <td>
@@ -146,7 +168,7 @@
                     </div>
                     <div style="padding-top: 5px;">
                         <img src="../icons//LineCommunity.png" class="featureIcon">
-                        <span class="featureSpan">(社群)：熊汶銨心亞洲統神</span>
+                        <span class="featureSpan">：(社群)熊汶銨心亞洲統神</span>
                     </div>
                 </div>
                 <div style="padding-top: 5px;">
@@ -157,10 +179,12 @@
                                     <span style="font-weight: bold;">給作者 <br> 一點鼓勵</span>
                                 </td>
                                 <td>
-                                    <a id="JkoPayButton" class="imgBtn"><img src="../icons/JkoPay.png" style="height: 22.5px; width: 70px;" title="街口支付"></a>
+                                    <a id="JkoPayButton" class="imgBtn"><img src="../icons/JkoPay.png"
+                                            style="height: 22.5px; width: 70px;" title="街口支付"></a>
                                 </td>
                                 <td>
-                                    <a id="LinePayButton" class="imgBtn"><img src="../icons/LinePay.png" style="height: 21px; width: 70px;" title="Line Pay"></a>
+                                    <a id="LinePayButton" class="imgBtn"><img src="../icons/LinePay.png"
+                                            style="height: 21px; width: 70px;" title="Line Pay"></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -168,12 +192,16 @@
                 </div>
             </div>
             <span style="position: absolute; right: 85px; bottom: 0px;">Github、Chrome商店</span>
-            <a id="GitHubrbutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img src="../icons/GitHub.png" style="width: 25px; position:absolute; right:50px;  bottom: 0px;"></a>
-            <a id="ChromeStorebutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img src="../icons/chrome_store.png" style="width: 25px;position:absolute; right:10px;  bottom: 0px;"></a>
+            <a id="GitHubrbutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img
+                    src="../icons/GitHub.png" style="width: 25px; position:absolute; right:50px;  bottom: 0px;"></a>
+            <a id="ChromeStorebutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img
+                    src="../icons/chrome_store.png"
+                    style="width: 25px;position:absolute; right:10px;  bottom: 0px;"></a>
 
         </div>
         <div class="row" style="text-align: center; vertical-align: bottom; ">
-            <span id="version" style="position: absolute; left: 0px; bottom: 0px; color: white; background-color: gray;"></span>
+            <span id="version"
+                style="position: absolute; left: 0px; bottom: 0px; color: white; background-color: gray;"></span>
 
         </div>
         <!-- <div class="row" style="text-align:right; padding-top: 10px;">
