@@ -4,7 +4,6 @@
 
 ## 給作者一點鼓勵：
 <img src="https://github.com/JinWei0811/NLHelper/blob/main/JKOPay.png" width=180 height=211 />
-<span>  </span>
 <img src="https://github.com/JinWei0811/NLHelper/blob/main/Linepay.png" width=175 height=211>
 ## 主要提供功能
 - <p><a href="https://www.facebook.com/NeVeRLosEs">熊班長（NeVeR_LosEs）FaceBook 連結</a></p>
@@ -12,6 +11,9 @@
 - <p><a href="https://www.instagram.com/nln1nl/?hl=zh-tw">熊班長（NeVeR_LosEs）Instagram 連結</a></p>
 - <p><a href="https://www.twitch.tv/never_loses">熊班長（NeVeR_LosEs）Twitch 連結</a></p>
 - <p><a href="https://discord.com/invite/Ycf9Gsxy2A">熊班長（NeVeR_LosEs）Discord 連結</a></p>
+- <p><a href="https://reurl.cc/Ldp8L4">熊班長（NeVeR_LosEs）Line社群 連結</a></p>
+- <p><a href="https://store.line.me/stickershop/product/13117151/zh-Hant">熊班長（NeVeR_LosEs）貼圖 nlnlOUO #1</a></p>
+- <p><a href="https://store.line.me/stickershop/product/14696383/zh-Hant">熊班長（NeVeR_LosEs）貼圖 nlnlOUO #2</a></p>
 
 - 自動點擊額外忠誠點數（大部分Twitch實況台皆會點擊）
 - 賭盤偵測提醒（但因Chrome插鍵限制1分鐘偵測一次，故有時沒偵測到或提醒時已快封盤）
