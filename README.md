@@ -3,8 +3,8 @@
 ![GITHUB]( https://github.com/JinWei0811/-/blob/main/interface.png "interface")
 
 ## 給作者一點鼓勵：
-街口支付連結：https://www.jkopay.com/transfer?j=Transfer:901329725 <br>
 <img src="https://github.com/JinWei0811/NLHelper/blob/main/JKOPay.png" width=180 height=211 />
+<span>  </span>
 <img src="https://github.com/JinWei0811/NLHelper/blob/main/Linepay.png" width=175 height=211>
 ## 主要提供功能
 - <p><a href="https://www.facebook.com/NeVeRLosEs">熊班長（NeVeR_LosEs）FaceBook 連結</a></p>
