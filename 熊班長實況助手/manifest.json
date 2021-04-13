@@ -23,5 +23,9 @@
         "activeTab",
         "notifications",
         "alarms"
-    ]
+    ],
+    "options_ui": {
+        "page": "option/option.html",
+        "chrome_style": true
+    }
 }

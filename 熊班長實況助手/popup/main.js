@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(dcle) {
 
     //#region icon, url
-    var buttonName = ["FBbutton", "Youtubebutton", "Instagrambutton", "Twitchbutton", "GitHubrbutton", "ChromeStorebutton", "Discordbutton"];
+    var buttonName = ["FBbutton", "Youtubebutton", "Instagrambutton", "Twitchbutton", "GitHubrbutton", "ChromeStorebutton", "Discordbutton", "LineCommunitybutton", "LineSticker1button", "LineSticker2button", "JkoPayButton", "LinePayButton"];
     var buttonUrl = ["https://www.facebook.com/NeVeRLosEs",
         "https://www.youtube.com/channel/UCRdJzOsu4MwKmY04vfAIDHw",
         "https://www.instagram.com/nln1nl/?hl=zh-tw",
@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
         "https://github.com/JinWei0811/TwitchNLHelper",
         "https://chrome.google.com/webstore/detail/nlnlouo/dhokajppblijnlidbgdphkpjbocpnhec?hl=zh-TW&authuser=0",
         "https://discord.com/invite/Ycf9Gsxy2A",
+        "https://reurl.cc/Ldp8L4",
+        "https://store.line.me/stickershop/product/13117151/zh-Hant",
+        "https://store.line.me/stickershop/product/14696383/zh-Hant",
+        "",
+        "",
     ];
     for (var i = 0; i < buttonName.length; i++) {
         var button = document.getElementById(buttonName[i]);
@@ -34,6 +39,35 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
     });
     //#endregion
 
+    //#region Tabs
+    var FButtonEvent = document.getElementById('FeaturesList'); // 功能列表
+    var PButtonEvent = document.getElementById("PointsList"); // 忠誠點數
+    var LButtonEvent = document.getElementById("AllLink"); // 相關連結
+    var AButtonEvent = document.getElementById("AboutAuthor"); // 關於作者
+
+    FButtonEvent.addEventListener('click', function(e) {
+        change_tab(0);
+        // document.getElementById('Points').style.display = 'none';
+        // document.getElementById('AllLinkPage').style.display = 'none';
+        // document.getElementById('AboutAuthorPage').style.display = 'none';
+        // document.getElementById('Features').style.display = '';
+
+        // PButtonEvent.style.backgroundColor = "rgb(8, 130, 151)";
+        // LButtonEvent.style.backgroundColor = "rgb(8, 130, 151)";
+        // AButtonEvent.style.backgroundColor = "rgb(8, 130, 151)";
+        // FButtonEvent.style.backgroundColor = "rgb(4, 59, 68)";
+    });
+    PButtonEvent.addEventListener('click', function(e) {
+        change_tab(1);
+    });
+    LButtonEvent.addEventListener('click', function(e) {
+        change_tab(2);
+    });
+    AButtonEvent.addEventListener('click', function(e) {
+        change_tab(3);
+    });
+    //#endregion
+
 
     //#region 
     // var T_Obj = document.getElementsByTagName("INPUT");
@@ -41,6 +75,20 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
     // Total_Obj[2].checked ? document.getElementById(cannotifi).checked = true : document.getElementById(cantnotifi).checked = true;
     //#endregion
 });
+
+function change_tab(value) {
+    Tabcontent = document.getElementsByClassName("tabContent");
+    Buttoncontent = document.getElementsByClassName("tablinks");
+    for (i = 0; i < Tabcontent.length; i++) {
+        if (i != value) {
+            Tabcontent[i].style.display = "none";
+            Buttoncontent[i].style.backgroundColor = "rgb(8, 130, 151)";
+        } else {
+            Tabcontent[i].style.display = '';
+            Buttoncontent[i].style.backgroundColor = "rgb(4, 59, 68)";
+        }
+    }
+}
 
 function disappear_show() {
     var showSuccess = document.getElementById("submitSuccess");
@@ -61,6 +109,14 @@ chrome.runtime.onMessage.addListener(function(message) {
         if (message.checknotification !== undefined) {
             message.checknotification === true ? testp[1].checked = true : testp[1].checked = false;
         }
+        if (message.clickT !== undefined) {
+            document.getElementById('ClickTimes').innerHTML = message.clickT;
+        }
+        if (message.pointsS !== undefined) {
+            document.getElementById('PointsStatus').innerHTML = message.pointsS;
+        }
+
+        console.log(message.checkclick, message.checknotification, message.clickT, message.pointsS);
     } catch (error) {
         console.log(error);
     }
@@ -69,8 +125,10 @@ chrome.runtime.onMessage.addListener(function(message) {
 let autoClick;
 let notification;
 get_detail();
-console.log(autoClick, '  ', notification);
 const app = document.getElementById("app")
+
+// var clickTimes = document.getElementById('ClickTimes').innerHTML = 'NaN';
+// var pointsStatus = document.getElementById('PointsStatus').innerHTML = 'NaN';
 
 fetch('../manifest.json').then(response => {
     return response.json();

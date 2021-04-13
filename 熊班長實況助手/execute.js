@@ -8,6 +8,7 @@ function goToActivityTab() {
         console.log(currentDateTime + '  Point Detect');
         if (activityTab != undefined) {
             activityTab.click();
+            chrome.runtime.sendMessage({ activityTab: true });
             console.log(currentDateTime + '  Click Success');
         }
     } catch (error) {

@@ -4,6 +4,8 @@ var canbet;
 var times = 0;
 var sclick;
 var snotification;
+var clickTimes = 0;
+var pointsStatus = 0;
 var alarmInfo = {
     delayInMinutes: 1,
     periodInMinutes: 1
@@ -25,9 +27,13 @@ chrome.runtime.onMessage.addListener(function(message) {
             canbet = message.content;
         }
         if (message.plsSendBack !== undefined) {
-            chrome.runtime.sendMessage({ checkclick: sclick, checknotification: snotification });
+            console.log(sclick, snotification, clickTimes, pointsStatus);
+            chrome.runtime.sendMessage({ checkclick: sclick, checknotification: snotification, clickT: clickTimes, pointsS: pointsStatus });
         }
-        console.log(sclick, ' and ', snotification, ' and ', canbet);
+        if (message.activityTab !== undefined) {
+            clickTimes++;
+        }
+        console.log(sclick, snotification, clickTimes, pointsStatus);
         if (canbet === true && times === 0) {
             chromeNotification();
             canbet = false;
