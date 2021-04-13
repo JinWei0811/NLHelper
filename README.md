@@ -4,7 +4,8 @@
 
 ## 給作者一點鼓勵：
 街口支付連結：https://www.jkopay.com/transfer?j=Transfer:901329725 <br>
-![GITHUB]( https://github.com/JinWei0811/NLHelper/blob/main/JKOPay.jpg "JKOPay")
+![GITHUB]( https://github.com/JinWei0811/NLHelper/blob/main/JKOPay.png  "JKOPay")
+![GITHUB]( https://github.com/JinWei0811/NLHelper/blob/main/Linepay.png  "LinePay")
 ## 主要提供功能
 - <p><a href="https://www.facebook.com/NeVeRLosEs">熊班長（NeVeR_LosEs）FaceBook 連結</a></p>
 - <p><a href="https://www.youtube.com/channel/UCRdJzOsu4MwKmY04vfAIDHw">熊班長（NeVeR_LosEs）Youtube 連結</a></p>
@@ -55,6 +56,9 @@
 <hr>
 
 ## 更新資訊：
+
+<h4>1.0.18</h4>
+1. <strong>自動取得版本號碼</strong> <br>
 
 <h4>1.0.17</h4>
 1. <strong>修正實況競猜提交失敗（感謝ieqaq回報）</strong> <br>

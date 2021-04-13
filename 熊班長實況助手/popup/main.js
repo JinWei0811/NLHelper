@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
         "https://reurl.cc/Ldp8L4",
         "https://store.line.me/stickershop/product/13117151/zh-Hant",
         "https://store.line.me/stickershop/product/14696383/zh-Hant",
-        "",
-        "",
+        "https://raw.githubusercontent.com/JinWei0811/NLHelper/main/JKOPay.png",
+        "https://raw.githubusercontent.com/JinWei0811/NLHelper/main/Linepay.png",
     ];
     for (var i = 0; i < buttonName.length; i++) {
         var button = document.getElementById(buttonName[i]);
