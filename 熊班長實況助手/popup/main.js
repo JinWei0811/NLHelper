@@ -110,10 +110,10 @@ chrome.runtime.onMessage.addListener(function(message) {
             message.checknotification === true ? testp[1].checked = true : testp[1].checked = false;
         }
         if (message.clickT !== undefined) {
-            document.getElementById('ClickTimes').innerHTML = message.clickT;
+            // document.getElementById('ClickTimes').innerHTML = message.clickT;
         }
         if (message.pointsS !== undefined) {
-            document.getElementById('PointsStatus').innerHTML = message.pointsS;
+            // document.getElementById('PointsStatus').innerHTML = message.pointsS;
         }
 
         console.log(message.checkclick, message.checknotification, message.clickT, message.pointsS);
