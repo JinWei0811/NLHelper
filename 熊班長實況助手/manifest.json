@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "nlnlOUO",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "來，跟我一起說一聲：Piyan",
   "icons": {
     "16": "icons/nlnlOUO16.jpg",
@@ -20,12 +20,21 @@
     "tabs",
     "activeTab",
     "notifications",
-    "alarms",
-    "scripting",
     "storage"
   ],
   "host_permissions": [
     "*://*.twitch.tv/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.twitch.tv/*"
+      ],
+      "js": [
+        "content/twitch-detector.js"
+      ],
+      "run_at": "document_idle"
+    }
   ],
   "options_ui": {
     "page": "option/option.html"
