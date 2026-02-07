@@ -1,44 +1,37 @@
 function detectBet() {
     try {
-        // var today = new Date();
-        // var nowm = today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes();
-        // var nowt = today.getSeconds() < 10 ? "0" + today.getSeconds() : today.getSeconds();
-        // var currentDateTime = today.getHours() + ':' + nowm + ":" + nowt;
-        // console.log(currentDateTime + '  Bet Detect');
-        // var activityFirst = document.getElementsByClassName("ScCoreButton-sc-1qn4ixc-0 ScCoreButtonText-sc-1qn4ixc-3 kGWcAX tw-core-button")[0];
-        var prediction = document.getElementsByClassName("community-prediction-highlight-header__title")[0];
-        // console.log(prediction);
-        // if (prediction !== undefined) {
-        //     chrome.runtime.sendMessage({ content: true });
-        // }
-        activityF(); // 打開第一層
-
-        setTimeout(activityS, 300); // 0.3S 如果有第二層則打開
-
-        setTimeout(activityT, 600); // 0.5S 如果有找到第三層發通知
-
-        setTimeout(activityF, 900); // 關閉全部
-
+        // Open community points panel first, then inspect prediction area
+        activityF();
+        setTimeout(activityS, 300);
+        setTimeout(activityT, 600);
+        setTimeout(activityF, 900); // close panel
     } catch (error) {
         console.log(error);
     }
 }
 
 function activityF() {
-    var activityFirst = document.getElementsByClassName("ScCoreButton-sc-1qn4ixc-0 ScCoreButtonText-sc-1qn4ixc-3 kGWcAX tw-core-button")[0];
-    activityFirst.click();
+    var activityFirst =
+        document.querySelector('[data-test-selector="community-points-summary"] button') ||
+        document.querySelector('.tw-core-button');
+    if (activityFirst) activityFirst.click();
 }
 
 function activityS() {
-    var activitySecond = document.getElementsByClassName("predictions-list-item__body tw-align-items-center tw-border-radius-medium tw-c-background-alt tw-flex tw-full-width")[0];
+    var activitySecond =
+        document.querySelector('[data-test-selector="prediction-card"]') ||
+        document.querySelector('.predictions-list-item__body');
     if (activitySecond !== undefined)
         activitySecond.click();
 }
 
 function activityT() {
-    var detectBet = document.getElementsByClassName("fixed-prediction-button fixed-prediction-button--blue tw-align-items-center tw-border-radius-small tw-flex tw-pd-x-1 tw-pd-y-05")[0];
-    // var test = document.getElementsByClassName("tw-font-size-4 tw-line-height-heading tw-semibold tw-title tw-word-break-word")[0];
-    // console.log(test);
+    var detectBet =
+        document.querySelector('[data-test-selector="prediction-blue-button"]') ||
+        document.querySelector('[data-test-selector="prediction-pink-button"]') ||
+        document.querySelector('.fixed-prediction-button--blue') ||
+        document.querySelector('.fixed-prediction-button--pink');
+
     if (detectBet !== undefined)
         chrome.runtime.sendMessage({ content: true });
 }

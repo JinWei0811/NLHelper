@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(dcle) {
+document.addEventListener('DOMContentLoaded', function() {
 
     //#region icon, url
     var buttonName = ["FBbutton", "Youtubebutton", "Instagrambutton", "Twitchbutton", "GitHubrbutton", "ChromeStorebutton", "Discordbutton", "LineCommunitybutton", "LineSticker1button", "LineSticker2button", "JkoPayButton", "LinePayButton"];
@@ -17,69 +17,55 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
     ];
     for (var i = 0; i < buttonName.length; i++) {
         var button = document.getElementById(buttonName[i]);
+        if (!button) continue;
         button.setAttribute("data-content", buttonUrl[i]);
-        button.addEventListener('click', function(ce) {
+        button.addEventListener('click', function() {
             chrome.tabs.create({ "url": this.getAttribute("data-content") });
         });
     }
     //#endregion
 
-    //#region check radio
+    //#region check box + save
     var dButtonEvent = document.getElementById("submitButton");
-    dButtonEvent.addEventListener('click', function(e) {
+    dButtonEvent.addEventListener('click', function() {
         var channelP = document.getElementsByName("Channel_Points");
         var Notification = document.getElementsByName("Quiz");
 
-        channelP[0].checked ? autoClick = true : autoClick = false;
-        Notification[0].checked ? notification = true : notification = false;
-        chrome.runtime.sendMessage({ sclick: autoClick, snotification: notification });
-        var showSuccess = document.getElementById("submitSuccess");
-        showSuccess.style.display = "";
-        setTimeout(disappear_show, 1000);
+        var autoClick = Boolean(channelP[0] && channelP[0].checked);
+        var notification = Boolean(Notification[0] && Notification[0].checked);
+
+        chrome.runtime.sendMessage({ type: "setState", sclick: autoClick, snotification: notification }, function() {
+            var showSuccess = document.getElementById("submitSuccess");
+            showSuccess.style.display = "";
+            setTimeout(disappear_show, 1000);
+        });
     });
     //#endregion
 
     //#region Tabs
-    var FButtonEvent = document.getElementById('FeaturesList'); // 功能列表
-    var PButtonEvent = document.getElementById("PointsList"); // 忠誠點數
-    var LButtonEvent = document.getElementById("AllLink"); // 相關連結
-    var AButtonEvent = document.getElementById("AboutAuthor"); // 關於作者
+    var FButtonEvent = document.getElementById('FeaturesList');
+    var PButtonEvent = document.getElementById("PointsList");
+    var LButtonEvent = document.getElementById("AllLink");
+    var AButtonEvent = document.getElementById("AboutAuthor");
 
-    FButtonEvent.addEventListener('click', function(e) {
-        change_tab(0);
-        // document.getElementById('Points').style.display = 'none';
-        // document.getElementById('AllLinkPage').style.display = 'none';
-        // document.getElementById('AboutAuthorPage').style.display = 'none';
-        // document.getElementById('Features').style.display = '';
-
-        // PButtonEvent.style.backgroundColor = "rgb(8, 130, 151)";
-        // LButtonEvent.style.backgroundColor = "rgb(8, 130, 151)";
-        // AButtonEvent.style.backgroundColor = "rgb(8, 130, 151)";
-        // FButtonEvent.style.backgroundColor = "rgb(4, 59, 68)";
-    });
-    PButtonEvent.addEventListener('click', function(e) {
-        change_tab(1);
-    });
-    LButtonEvent.addEventListener('click', function(e) {
-        change_tab(2);
-    });
-    AButtonEvent.addEventListener('click', function(e) {
-        change_tab(3);
-    });
+    FButtonEvent.addEventListener('click', function() { change_tab(0); });
+    PButtonEvent.addEventListener('click', function() { change_tab(1); });
+    LButtonEvent.addEventListener('click', function() { change_tab(2); });
+    AButtonEvent.addEventListener('click', function() { change_tab(3); });
     //#endregion
 
+    loadState();
 
-    //#region 
-    // var T_Obj = document.getElementsByTagName("INPUT");
-    // T_Obj[0].checked ? document.getElementById(autoClick).checked = true : document.getElementById(dontautoClick).checked = true;
-    // Total_Obj[2].checked ? document.getElementById(cannotifi).checked = true : document.getElementById(cantnotifi).checked = true;
-    //#endregion
+    fetch('../manifest.json')
+        .then(response => response.json())
+        .then(data => document.getElementById("version").innerHTML = `${data.version}`)
+        .catch(() => {});
 });
 
 function change_tab(value) {
-    Tabcontent = document.getElementsByClassName("tabContent");
-    Buttoncontent = document.getElementsByClassName("tablinks");
-    for (i = 0; i < Tabcontent.length; i++) {
+    var Tabcontent = document.getElementsByClassName("tabContent");
+    var Buttoncontent = document.getElementsByClassName("tablinks");
+    for (var i = 0; i < Tabcontent.length; i++) {
         if (i != value) {
             Tabcontent[i].style.display = "none";
             Buttoncontent[i].style.backgroundColor = "rgb(8, 130, 151)";
@@ -95,41 +81,15 @@ function disappear_show() {
     showSuccess.style.display = "none";
 }
 
-function get_detail() {
-    chrome.runtime.sendMessage({ plsSendBack: true });
-}
-
-chrome.runtime.onMessage.addListener(function(message) {
-    try {
+function loadState() {
+    chrome.runtime.sendMessage({ type: "getState" }, function(message) {
+        if (!message) return;
         var testp = document.getElementsByTagName('input');
-        // testp[0].checked = false;
-        if (message.checkclick !== undefined) {
-            message.checkclick === true ? testp[0].checked = true : testp[0].checked = false;
+        if (message.checkclick !== undefined && testp[0]) {
+            testp[0].checked = Boolean(message.checkclick);
         }
-        if (message.checknotification !== undefined) {
-            message.checknotification === true ? testp[1].checked = true : testp[1].checked = false;
+        if (message.checknotification !== undefined && testp[1]) {
+            testp[1].checked = Boolean(message.checknotification);
         }
-        if (message.clickT !== undefined) {
-            // document.getElementById('ClickTimes').innerHTML = message.clickT;
-        }
-        if (message.pointsS !== undefined) {
-            // document.getElementById('PointsStatus').innerHTML = message.pointsS;
-        }
-
-        console.log(message.checkclick, message.checknotification, message.clickT, message.pointsS);
-    } catch (error) {
-        console.log(error);
-    }
-});
-
-let autoClick;
-let notification;
-get_detail();
-const app = document.getElementById("app")
-
-// var clickTimes = document.getElementById('ClickTimes').innerHTML = 'NaN';
-// var pointsStatus = document.getElementById('PointsStatus').innerHTML = 'NaN';
-
-fetch('../manifest.json').then(response => {
-    return response.json();
-}).then(data => document.getElementById("version").innerHTML = `${data.version}`);
+    });
+}

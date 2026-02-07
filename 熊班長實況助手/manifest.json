@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "nlnlOUO",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "來，跟我一起說一聲：Piyan",
   "icons": {
     "16": "icons/nlnlOUO16.jpg",
@@ -21,7 +21,8 @@
     "activeTab",
     "notifications",
     "alarms",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "host_permissions": [
     "*://*.twitch.tv/*"
