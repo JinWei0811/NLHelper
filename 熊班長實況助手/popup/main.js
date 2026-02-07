@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "https://www.youtube.com/channel/UCRdJzOsu4MwKmY04vfAIDHw",
         "https://www.instagram.com/nln1nl/?hl=zh-tw",
         "https://www.twitch.tv/never_loses",
-        "https://github.com/JinWei0811/TwitchNLHelper",
+        "https://github.com/JinWei0811/NLHelper", 
         "https://chrome.google.com/webstore/detail/nlnlouo/dhokajppblijnlidbgdphkpjbocpnhec?hl=zh-TW&authuser=0",
         "https://discord.com/invite/Ycf9Gsxy2A",
         "https://reurl.cc/Ldp8L4",

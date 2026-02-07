@@ -7,8 +7,10 @@
   let settings = { ...DEFAULT_SETTINGS };
   let lastScanAt = 0;
   let lastPredictionSignal = 0;
+  let lastPanelProbeAt = 0;
   const SCAN_DEBOUNCE_MS = 300;
   const PREDICTION_SIGNAL_COOLDOWN_MS = 30 * 1000;
+  const PANEL_PROBE_COOLDOWN_MS = 20 * 1000;
 
   function loadSettings() {
     chrome.storage.local.get(DEFAULT_SETTINGS, (data) => {
@@ -44,17 +46,56 @@
     return location.hostname === "www.twitch.tv" && /^\/never_loses\/?$/i.test(location.pathname);
   }
 
+  function getPredictionButton() {
+    return (
+      document.querySelector('[data-test-selector="prediction-blue-button"]') ||
+      document.querySelector('[data-test-selector="prediction-pink-button"]') ||
+      document.querySelector('[data-test-selector*="prediction"] button') ||
+      document.querySelector('.fixed-prediction-button--blue') ||
+      document.querySelector('.fixed-prediction-button--pink')
+    );
+  }
+
+  function openCommunityPanelForProbe() {
+    const now = Date.now();
+    if (now - lastPanelProbeAt < PANEL_PROBE_COOLDOWN_MS) return;
+    lastPanelProbeAt = now;
+
+    const panelBtn =
+      document.querySelector('[data-test-selector="community-points-summary"] button') ||
+      document.querySelector('.community-points-summary button') ||
+      document.querySelector('.tw-core-button');
+
+    if (panelBtn) {
+      panelBtn.click();
+      setTimeout(() => {
+        const maybePredictionCard =
+          document.querySelector('[data-test-selector="prediction-card"]') ||
+          document.querySelector('.predictions-list-item__body');
+        if (maybePredictionCard) maybePredictionCard.click();
+      }, 180);
+    }
+  }
+
   function notifyPredictionIfDetected() {
     if (!settings.snotification) return;
     if (!isTargetChannel()) return;
 
-    const predictionBtn =
-      document.querySelector('[data-test-selector="prediction-blue-button"]') ||
-      document.querySelector('[data-test-selector="prediction-pink-button"]') ||
-      document.querySelector('.fixed-prediction-button--blue') ||
-      document.querySelector('.fixed-prediction-button--pink');
+    let predictionBtn = getPredictionButton();
 
-    if (!predictionBtn) return;
+    // Fallback: Twitch sometimes renders prediction buttons only after opening panel/card
+    if (!predictionBtn) {
+      openCommunityPanelForProbe();
+      setTimeout(() => {
+        const delayedBtn = getPredictionButton();
+        if (!delayedBtn) return;
+        const nowDelayed = Date.now();
+        if (nowDelayed - lastPredictionSignal < PREDICTION_SIGNAL_COOLDOWN_MS) return;
+        lastPredictionSignal = nowDelayed;
+        chrome.runtime.sendMessage({ type: "predictionDetected" });
+      }, 350);
+      return;
+    }
 
     const now = Date.now();
     if (now - lastPredictionSignal < PREDICTION_SIGNAL_COOLDOWN_MS) return;
