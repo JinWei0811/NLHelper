@@ -55,6 +55,23 @@ h1 {
   border-radius: 10px;
   padding: 8px 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.nav-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.inline-icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: -2px;
+  margin-right: 4px;
 }
 
 .panel {
@@ -177,6 +194,16 @@ h1 {
   padding: 8px;
   font-size: 12px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.imgBtn img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
 }
 
 .imgBtn:hover {
