@@ -53,20 +53,31 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
     var currentDateTime = today.getHours() + ':' + nowm;
     chrome.tabs.query({}, function(tabs) {
         tabs.forEach(tab => {
-            var url = new URL(tab.url);
-            var domain = url.hostname;
-            var href = url.href;
-            if (domain === "www.twitch.tv") {
-                console.log(currentDateTime + " Get Twitch Pages: " + url);
-                console.log(sclick, ' and ', snotification, ' and ', canbet, ' and ', times);
-                if (sclick) {
-                    console.log(currentDateTime, ' click');
-                    chrome.tabs.executeScript(tab.id, { file: "/execute.js" });
+            try {
+                if (!tab.url) return;
+                var url = new URL(tab.url);
+                var domain = url.hostname;
+                var href = url.href;
+                if (domain === "www.twitch.tv") {
+                    console.log(currentDateTime + " Get Twitch Pages: " + url);
+                    console.log(sclick, ' and ', snotification, ' and ', canbet, ' and ', times);
+                    if (sclick) {
+                        console.log(currentDateTime, ' click');
+                        chrome.scripting.executeScript({
+                            target: { tabId: tab.id },
+                            files: ["execute.js"]
+                        });
+                    }
+                    if (snotification && href === "https://www.twitch.tv/never_loses") {
+                        console.log(currentDateTime, ' detectbet');
+                        chrome.scripting.executeScript({
+                            target: { tabId: tab.id },
+                            files: ["betting.js"]
+                        });
+                    }
                 }
-                if (snotification && href === "https://www.twitch.tv/never_loses") {
-                    console.log(currentDateTime, ' detectbet');
-                    chrome.tabs.executeScript(tab.id, { file: "/betting.js" });
-                }
+            } catch (error) {
+                console.log(error);
             }
         });
     });
