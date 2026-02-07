@@ -17,7 +17,7 @@
 - <p><a href="https://store.line.me/stickershop/product/14696383/zh-Hant">熊班長（NeVeR_LosEs）貼圖 nlnlOUO #2</a></p>
 
 - 自動點擊額外忠誠點數（大部分Twitch實況台皆會點擊）
-- 賭盤偵測提醒（但因Chrome插鍵限制1分鐘偵測一次，故有時沒偵測到或提醒時已快封盤）
+- 賭盤偵測提醒（已優化為 content script + MutationObserver 即時偵測，並保留節流避免重複通知）
 
 ![GITHUB]( https://github.com/JinWei0811/TwitchNLHelper/blob/main/Notification.png "notification")
 <p>自動點擊、賭盤提醒皆可從選項中關閉，修改後需點擊 <font color=#FF0000>提交</font> 送出。</p>
