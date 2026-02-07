@@ -1,194 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
-    <title>Popup Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nlnlOUO</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../bootstrap.min.css">
     <script src="main.js"></script>
 </head>
 
 <body>
+    <div class="shell">
+        <header class="topbar">
+            <div>
+                <h1>熊班長實況助手</h1>
+                <p>nlnlOUO · Twitch companion</p>
+            </div>
+            <span id="version" class="version"></span>
+        </header>
 
-    <!-- <div class="container"> -->
-    <div class="pt-2 text-info d-flex justify-content-center">
-        <H3 class="font-weight-bold">熊班長實況助手</H3>
-    </div>
-    <div class="tab d-flex justify-content-center">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <button class="tablinks button " id="FeaturesList"
-                            style="background-color: rgb(4, 59, 68);">功能<br>列表</button>
-                    </td>
-                    <td class="ml-1">
-                        <button class="tablinks button" id="PointsList"
-                            style="background-color: rgb(8, 130, 151);">自動<br>競猜</button>
-                    </td>
-                    <td class="ml-1">
-                        <button class="tablinks button" id="AllLink"
-                            style="background-color: rgb(8, 130, 151);">相關<br>連結</button>
-                    </td>
-                    <td class="ml-1">
-                        <button class="tablinks button" id="AboutAuthor"
-                            style="background-color: rgb(8, 130, 151);">關於<br>作者</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="col-10 mx-auto font-weight-bold">
-        <hr style="border: 1px dashed;">
-    </div>
-    <div class="w-100"></div>
-    <div id="Features" class="tabContent row ">
-        <!-- <div class="col-12 "></div> -->
-        <div class="col-12 d-flex justify-content-center align-items-center">
-            <img class="featureIcon" src="../icons/Piyan.png">
-            <span class="featureSpan ml-1">收取忠誠點數</span>
-            <input id="Channel_Points_Input" class="ml-1" id="autoClick" type="checkbox" name="Channel_Points"
-                value="Click">
-            <span for="Channel_Points_Input" class="ml-1">開啟</span>
-        </div>
-        <div class="col-12 d-flex justify-content-center align-items-center mt-2">
-            <img class="featureIcon" src="../icons/gambling.png">
-            <span class="featureSpan ml-1">實況競猜提醒</span>
-            <input class="ml-1" id="cannotifi" type="checkbox" name="Quiz" value="Notification">
-            <span for="Channel_Points_Input" class="ml-1">開啟</span>
-        </div>
-        <div class="col-12 d-flex justify-content-center">
-            <span id="submitSuccess" style="display:none">提交成功</span>
-        </div>
+        <nav class="tab d-flex justify-content-center">
+            <button class="tablinks button" id="FeaturesList" style="background-color: rgb(4, 59, 68);">功能</button>
+            <button class="tablinks button" id="PointsList" style="background-color: rgb(8, 130, 151);">競猜</button>
+            <button class="tablinks button" id="AllLink" style="background-color: rgb(8, 130, 151);">連結</button>
+            <button class="tablinks button" id="AboutAuthor" style="background-color: rgb(8, 130, 151);">關於</button>
+        </nav>
 
-        <div class="col-4 mx-auto ml-4">
-            <a id="submitButton" class="btn bg-primary " style=" cursor: pointer;">
-                <span class="text-light">提交</span></a>
-        </div>
+        <section id="Features" class="tabContent panel">
+            <div class="setting-row">
+                <div class="setting-text">
+                    <strong>自動領取忠誠點數</strong>
+                    <small>偵測到可領按鈕時自動點擊</small>
+                </div>
+                <label class="switch">
+                    <input id="Channel_Points_Input" type="checkbox" name="Channel_Points" value="Click">
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="setting-row">
+                <div class="setting-text">
+                    <strong>競猜提醒通知</strong>
+                    <small>僅 never_loses 頻道，含防重複通知</small>
+                </div>
+                <label class="switch">
+                    <input id="cannotifi" type="checkbox" name="Quiz" value="Notification">
+                    <span></span>
+                </label>
+            </div>
+
+            <button id="submitButton" class="primary-btn">儲存設定</button>
+            <span id="submitSuccess" class="success" style="display:none">已儲存 ✅</span>
+        </section>
+
+        <section id="Points" class="tabContent panel" style="display:none;">
+            <p class="muted">競猜策略功能（自動下注）暫未啟用</p>
+            <div class="radio-row">
+                <label><input type="radio" name="bet" id="betBlue"> 藍藍幫</label>
+                <label><input type="radio" name="bet" id="betPink"> 粉紅幫</label>
+                <label><input type="radio" name="bet" id="betAuto"> 隨機</label>
+            </div>
+            <div class="input-row">
+                <label for="every_Points">每次下注點數</label>
+                <input type="number" id="every_Points" min="0" placeholder="例如 1000">
+            </div>
+            <p class="danger">此頁仍為規劃中，先以提醒功能為主</p>
+        </section>
+
+        <section id="AllLinkPage" class="tabContent panel" style="display:none;">
+            <div class="grid-links">
+                <a id="FBbutton" class="imgBtn">Facebook</a>
+                <a id="Youtubebutton" class="imgBtn">YouTube</a>
+                <a id="Instagrambutton" class="imgBtn">Instagram</a>
+                <a id="Twitchbutton" class="imgBtn">Twitch</a>
+                <a id="Discordbutton" class="imgBtn">Discord</a>
+                <a id="LineCommunitybutton" class="imgBtn">Line社群</a>
+                <a id="LineSticker1button" class="imgBtn">貼圖#1</a>
+                <a id="LineSticker2button" class="imgBtn">貼圖#2</a>
+            </div>
+        </section>
+
+        <section id="AboutAuthorPage" class="tabContent panel" style="display:none;">
+            <p><strong>Twitch：</strong>baby850811</p>
+            <p><strong>Line 社群：</strong>(社群)熊汶銨心亞洲統神</p>
+            <div class="grid-links two">
+                <a id="GitHubrbutton" class="imgBtn">GitHub</a>
+                <a id="ChromeStorebutton" class="imgBtn">Chrome 商店</a>
+                <a id="JkoPayButton" class="imgBtn">街口贊助</a>
+                <a id="LinePayButton" class="imgBtn">Line Pay</a>
+            </div>
+        </section>
     </div>
-
-
-    <div id="Points" class="tabContent row" style="display: none;">
-        <!-- <div id="Points" class="tabContent row"> -->
-        <div class="col-12  text-secondary align-items-center" style="text-align: center;">
-            <input type="radio" name="bet" id="betBlue">
-            <label for="betBlue">藍藍幫 /</label>
-            <input type="radio" name="bet" id="betPink">
-            <label for="betPink">粉紅幫 /</label>
-            <input type="radio" name="bet" id="betAuto">
-            <label for="betAuto">隨機</label>
-        </div>
-        <div class="col-12 text-secondary form-row d-flex justify-content-center">
-            <span class="mr-1">每次下注點數</span>
-            <input class="form-control" type="number" id="every_Points" style="width: 40%; height: 70%;" min="0">
-        </div>
-
-        <div class="col-12 text-secondary ml-1" style="text-align: center;">
-            <label class="">忠誠點數增長：<span id="PointsStatus">NaN</span></label>
-        </div>
-        <div class="col-12" style="text-align: center;">
-            <span class="" style="color: red;">此頁功能待完善</span>
-        </div>
-    </div>
-    <div id="AllLinkPage" class="tabContent row" style="display: none;">
-        <div class="col-10 form-row mx-auto">
-            <div class="col-3 form-group py-0 my-0" style="height: 50%;">
-                <a id="FBbutton" class="btn btn-default imgBtn py-0"><img src="../icons/FB.png" style="width: 25px;"
-                        title="熊班長FB"></a>
-                <!-- <span style="font-size: small;">Facebook</span> -->
-            </div>
-            <div class="col-3 form-group py-0">
-                <a id="Youtubebutton" class="btn btn-default imgBtn py-0"><img src="../icons/Youtube.png"
-                        style="width: 25px;" title="熊班長YT"></a>
-                <!-- <span style="font-size: small;">Youtube</span> -->
-            </div>
-            <div class="col-3 form-group py-0">
-                <a id="Instagrambutton" class="btn btn-default imgBtn py-0"><img src="../icons/Instagram.png"
-                        style="width: 25px;" title="熊班長IG"></a>
-                <!-- <span style="font-size: small;">Instagram</span> -->
-            </div>
-            <div class="col-3 form-group py-0">
-                <a id="Twitchbutton" class="btn btn-default imgBtn py-0"><img src="../icons/Twitch.png"
-                        style="width: 25px;" title="熊班長Twitch"></a>
-                <!-- <span style="font-size: small;">Twitch</span> -->
-            </div>
-        </div>
-        <div class="col-10 form-row mx-auto">
-            <div class="col-3 form-group py-0">
-                <a id="Discordbutton" class="btn btn-default imgBtn py-0"><img src="../icons/Discord.png"
-                        style="width: 25px;" title="熊班長DC群"></a>
-                <!-- <span style=" font-size: small;">Discord</span> -->
-            </div>
-            <div class="col-3 form-group py-0">
-                <a id="LineCommunitybutton" class="btn btn-default imgBtn py-0"><img src="../icons/LineCommunity.png"
-                        style="width: 25px;" title="熊班長Line社群"></a>
-                <!-- <span style="font-size: small;">Line社群</span> -->
-            </div>
-            <div class="col-3 form-group py-0">
-                <a id="LineSticker1button" class="btn btn-default imgBtn py-0"><img src="../icons/LineSticker1.png"
-                        style="width: 25px;" title="熊班長貼圖"></a>
-                <!-- <span style="font-size: small;">nlnlOuO#1</span> -->
-            </div>
-            <div class="col-3 form-group py-0">
-                <a id="LineSticker2button" class="btn btn-default imgBtn py-0"><img src="../icons/LineSticker2.png"
-                        style="width: 25px;" title="熊班長貼圖"></a>
-                <!-- <span style="font-size: small;">nlnlOuO#2</span> -->
-            </div>
-        </div>
-    </div>
-    <div id="AboutAuthorPage" class="tabContent row" style="display: none;">
-        <div class="mx-auto">
-            <div class="form-row">
-                <img src="../icons/Twitch.png" class="featureIcon">
-                <span class="featureSpan">：baby850811</span>
-            </div>
-            <div class="form-row mt-1">
-                <img src="../icons//LineCommunity.png" class="featureIcon">
-                <span class="featureSpan">：(社群)熊汶銨心亞洲統神</span>
-            </div>
-        </div>
-        <div class="tab col-12 d-flex justify-content-center mt-1">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <span style="font-weight: bold;">給作者一點鼓勵</span>
-                        </td>
-                        <td>
-                            <a id="JkoPayButton" class="imgBtn"><img src="../icons/JkoPay.png"
-                                    style="height: 22.5px; width: 70px;" title="街口支付"></a>
-                        </td>
-                        <td>
-                            <a id="LinePayButton" class="imgBtn"><img src="../icons/LinePay.png"
-                                    style="height: 21px; width: 70px;" title="Line Pay"></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- <span style="position: absolute; right: 85px; bottom: 0px;">Github、Chrome商店</span> -->
-        <div class="col-12">
-            <a id="GitHubrbutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img
-                    src="../icons/GitHub.png" style="width: 25px; position:absolute; right:60px;  bottom: 0px;"></a>
-            <a id="ChromeStorebutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img
-                    src="../icons/chrome_store.png"
-                    style="width: 25px; position:absolute; right:20px;  bottom: 0px;"></a>
-        </div>
-    </div>
-    <div class="row" style="text-align: center; vertical-align: bottom; ">
-        <span id="version"
-            style="position: absolute; left: 0px; bottom: 0px; color: white; background-color: gray;"></span>
-
-    </div>
-    <!-- <div class="row" style="text-align:right; padding-top: 10px;">
-            <span>給作者一點點鼓勵</span>
-            <a id="Sponsorbutton" class="btn btn-default" style="margin: 10px; cursor: pointer;"><img src="../icons/Sponsor.png" style="width: 25px;"></a>
-        </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-
 </body>
 
 </html>
